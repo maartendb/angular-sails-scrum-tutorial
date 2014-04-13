@@ -229,6 +229,8 @@ Add angular-sails module dependency **ngSails** to the AngularJS app, in **app/j
 
 Modify **js/controllers.js** to use sails and fill $scope.items from sails.
 
+**TODO** Add several versions of this file with increasing functionality. Start with just the get("/item") part.
+
 ```javascript
 'use strict';
 
