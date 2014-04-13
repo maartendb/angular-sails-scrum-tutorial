@@ -229,7 +229,7 @@ Add angular-sails module dependency **ngSails** to the AngularJS app, in **app/j
 
 Modify **js/controllers.js** to use sails and fill $scope.items from sails.
 
-```
+```javascript
 'use strict';
 
 /* Controllers */
