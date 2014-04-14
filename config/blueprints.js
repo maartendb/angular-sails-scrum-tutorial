@@ -147,6 +147,8 @@ module.exports.blueprints = {
    * PUT    /foos/:id?
    * DELETE /foos/:id?
    */
-  pluralize: false
+  pluralize: false,
+
+	autoWatch: true // not recommended, but now it's ok
 
 };
