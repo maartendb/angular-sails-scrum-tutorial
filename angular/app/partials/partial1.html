@@ -1,1 +1,12 @@
 <p>This is the partial for view 1.</p>
+
+<ul>
+  <li ng-repeat="item in items">
+    {{item.role}} | {{item.feature}}
+    <ul>
+      <li ng-repeat="task in item.tasks">
+      {{task.title}} {{task.assignee}}
+      </li>
+    </ul>
+  </li>
+</ul>
