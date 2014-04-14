@@ -321,7 +321,6 @@ If you reload http://localhost:1337/angular/app/ , you should now see a nested l
 ## TODO
 
  * Add more explanation and details to the last part
- * Add the finished project to github
  * List of other tutorials and documentation I found useful
 
 ## UPCOMING
