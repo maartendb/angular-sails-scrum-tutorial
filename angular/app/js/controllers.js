@@ -19,7 +19,7 @@ function($scope,$sails,$filter) {
       // so we add it explicitly 
       $scope.items.push(response);
     }).error(function (response) {
-      console.log('post /item error');
+      window.alert('post /item error');
     });
     $scope.newItem = {};
   };
@@ -32,12 +32,24 @@ function($scope,$sails,$filter) {
       // so we add it explicitly
       item.tasks.push(response);
     }).error(function (response) {
-      console.log('post /task error');
+      window.alert('post /task error');
     });
     item.newTask = {};
   };
-
-
+  $scope.updateItem = function(item) {
+    $sails.put("/item/"+item.id,item).success(function (response) {
+      console.log("put /task success");
+    }).error(function (response) {
+      console.log('put /task error');
+    });
+  };
+  $scope.updateTask = function(task) {
+    $sails.put("/task/"+task.id,task).success(function (response) {
+      console.log("put /task success");
+    }).error(function (response) {
+      window.alert('put /task error');
+    });
+  };
   (function() {
     $sails.get("/item").success(function (response) {
       $scope.items = response; 
@@ -54,7 +66,7 @@ function($scope,$sails,$filter) {
     }).error(function (response) { console.log('error');});
 
     $sails.on('item', function ( message ) {
-      console.log('sails published a message for item: '+message.verb);
+      window.alert('sails published a message for item: '+message.verb);
       switch (message.verb)
       {
         case 'created':
@@ -80,7 +92,7 @@ function($scope,$sails,$filter) {
           var idx = $scope.lookup[message.id];
           $sails.get("/task/"+message.addedId).success(function (aTask) {
             $scope.items[idx].tasks.push(aTask);
-          }).error(function (aTask) { console.log('error');});
+          }).error(function (aTask) { window.alert('error getting added task');});
           break;
         case 'removedFrom':
           var idx = $scope.lookup[message.id];
