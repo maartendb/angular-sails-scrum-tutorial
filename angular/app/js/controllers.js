@@ -16,7 +16,7 @@ function($scope,$sails,$filter) {
     $sails.post("/item",newItem).success(function (response) {
       console.log("post /item success"+response);
       // if we post, we don't get a create message from ourselves,
-			// so we add it explicitly 
+      // so we add it explicitly 
       $scope.items.push(response);
     }).error(function (response) {
       console.log('post /item error');
@@ -29,7 +29,7 @@ function($scope,$sails,$filter) {
     $sails.post("/task",item.newTask).success(function (response) {
       console.log("post /task success");
       // if we post, we don't get a addedTo message from ourselves,
-			// so we add it explicitly
+      // so we add it explicitly
       item.tasks.push(response);
     }).error(function (response) {
       console.log('post /task error');

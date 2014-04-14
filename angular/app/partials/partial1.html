@@ -2,15 +2,23 @@
 
 <ul>
   <li ng-repeat="item in items">
-    {{item.role}} | {{item.feature}}
+    <form role="form" ng-submit="updateItem(item)">
+      Item: As a <input type="text" ng-model="item.role" value="{{item.role}}" /><!--
+      --> I want <input type="text" ng-model="item.feature" value="{{item.feature}}" size="50" /><!--
+      --><input type="submit" value="Update Item" />
+    </form>
     <ul>
       <li ng-repeat="task in item.tasks">
-      {{task.title}} {{task.assignee}}
+        <form role="form" ng-submit="updateTask(task)">
+          Task:<input type="text" ng-model="task.title" value="{{task.title}}" size="50" /><!--
+          --> Assignee:<input type="text" ng-model="task.assignee" value="{{task.assignee}}" /><!--
+          --><input type="submit" value="Update Task" />
+        </form>
       </li>
       <li>
         <form role="form" ng-submit="createTask(item)">
-          <input type="text" ng-model="item.newTask.title" placeholder="Task" /><!--
-          --><input type="text" ng-model="item.newTask.assignee" placeholder="Assignee" /><!--
+          Task:<input type="text" ng-model="item.newTask.title" placeholder="Task" size="50" /><!--
+          --> Assignee:<input type="text" ng-model="item.newTask.assignee" placeholder="Assignee" /><!--
           --><input type="submit" value="Add Task" />
         </form>
       </li>
@@ -18,8 +26,8 @@
   </li>
   <li>
 		<form role="form" ng-submit="createItem(newItem)">
-			<input type="text" ng-model="newItem.role" placeholder="As a ..." /><!--
-			--><input type="text" ng-model="newItem.feature" placeholder="I want to ..." /><!--
+			Item: As a <input type="text" ng-model="newItem.role" placeholder="As a ..." /><!--
+			--> I want <input type="text" ng-model="newItem.feature" placeholder="I want to ..." size="50" /><!--
       --><input type="submit" value="Add Item" />
 		</form>
 	</li>
