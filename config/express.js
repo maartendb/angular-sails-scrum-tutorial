@@ -15,7 +15,13 @@ module.exports.express = {
 	//
 	// loadMiddleware: function( app, defaultMiddleware, sails ) { ... }
 
-
+	
+	// to access the angular folder as static 
+  customMiddleware: function (app) {
+    console.log(__dirname);
+    var express = require('../node_modules/sails/node_modules/express');
+    app.use('/angular',express.static(__dirname+"/../angular"));
+  }
 
 
 	// Override one or more of the default middleware (besides bodyParser, cookieParser)
