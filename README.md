@@ -6,7 +6,7 @@ This tutorial shows how to write a web app with Sails.js and AngularJS, using so
 
 [AngularJS](angularjs.org/) is a javascript library that allows you to enhance HTML with custom tags for rich interaction between your HTML code and javascript variables.
 
-I started using Node.js only recently and went through several tutorials myself, with varying degrees of success. There are many different ways to do things, and many tools to choose from. I tried to stay as close to the recommended ways of doing things or what seems to be the concensus. That said, I am very open for suggestions.
+I started using Node.js only recently and tried several examples and went through some tutorials myself, with varying degrees of success. There are many different ways to do things, many tools to choose from and things seem to change quite rapidly. In any case, I tried to stay as close to the sails.js project as it installs out of the box, as well as to the recommended angular-seed skeleton app. That said, I am very open for suggestions.
 
 This tutorial assumes you have Node.js installed and some experience with it and that you know what sails.js and AngularJS are about, but otherwise it is a step-by-step guide so you should be able to follow it without prior knowledge.
 
