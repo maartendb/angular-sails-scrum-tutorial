@@ -2,6 +2,8 @@
 
 This tutorial shows how to write a web app with Sails.js and AngularJS, using socket.io for realtime updates between the Sails.js backend and the AngularJS frontend. 
 
+The code of this tutorial is in github at https://github.com/maartendb/angular-sails-scrum-tutorial .
+
 [Sails.js](http://sailsjs.org/) is a [Node.js](http://nodejs.org) MVC framework for developing realtime web apps. It automatically generates a RESTful JSON API.
 
 [AngularJS](angularjs.org/) is a javascript library that allows you to enhance HTML with custom tags for rich interaction between your HTML code and javascript variables.
@@ -318,6 +320,8 @@ In **config/blueprints.js**, you will need to set autoWatch to true, in order to
 
 If you reload http://localhost:1337/angular/app/ , you should now see a nested list with the items and their tasks. When you create, destroy or update items or tasks with the sails.js RESTful, you should see the changes reflected in realtime in the angular app.
 
+**The result of the tutorial until here is in branch showdata**
+
 ## TODO
 
  * Add more explanation and details to the last part
@@ -326,7 +330,7 @@ If you reload http://localhost:1337/angular/app/ , you should now see a nested l
 ## UPCOMING
 
  * Make the angular app the homepage
- * Add forms to create items and tasks
+ * Add forms to create items and tasks **in branch forms**
  * Add forms to edit items and tasks attributes
  * Adding buttons to remove items and tasks
  * Using angular-ui-tree for a draggable tree
