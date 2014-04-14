@@ -3,16 +3,16 @@
 <ul>
   <li ng-repeat="item in items">
     <form role="form" ng-submit="updateItem(item)">
-      Item: As a <input type="text" ng-model="item.role" value="{{item.role}}" /><!--
-      --> I want <input type="text" ng-model="item.feature" value="{{item.feature}}" size="50" /><!--
-      --><input type="submit" value="Update Item" />
+      As a <input type="text" ng-model="item.role" ng-value="item.role" ng-change="itemEdited(item)" /><!--
+      --> I want <input type="text" ng-model="item.feature" ng-value="item.feature" size="50" ng-change="itemEdited(item)" /><!--
+      --><input type="submit" ng-class="item.edited" value="Update Item" />
     </form>
     <ul>
       <li ng-repeat="task in item.tasks">
         <form role="form" ng-submit="updateTask(task)">
-          Task:<input type="text" ng-model="task.title" value="{{task.title}}" size="50" /><!--
-          --> Assignee:<input type="text" ng-model="task.assignee" value="{{task.assignee}}" /><!--
-          --><input type="submit" value="Update Task" />
+          Task:<input type="text" ng-model="task.title" ng-value="task.title" size="50" ng-change="taskEdited(task)"/><!--
+          --> Assignee:<input type="text" ng-model="task.assignee" ng-value="task.assignee" ng-change="taskEdited(task)"/><!--
+          --><input type="submit" ng-class="task.edited" value="Update Task" />
         </form>
       </li>
       <li>
