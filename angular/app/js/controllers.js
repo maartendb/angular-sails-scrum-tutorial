@@ -11,6 +11,33 @@ function($scope,$sails,$filter) {
   $scope.lookup = {};
   $scope.items = [];
 
+  $scope.createItem = function(newItem) {
+    console.log('createItem '+JSON.stringify(newItem));
+    $sails.post("/item",newItem).success(function (response) {
+      console.log("post /item success"+response);
+      // if we post, we don't get a create message from ourselves,
+			// so we add it explicitly 
+      $scope.items.push(response);
+    }).error(function (response) {
+      console.log('post /item error');
+    });
+    $scope.newItem = {};
+  };
+  $scope.createTask = function(item) {
+    console.log('createTask '+JSON.stringify(item.newTask));
+    item.newTask.owner = item.id;
+    $sails.post("/task",item.newTask).success(function (response) {
+      console.log("post /task success");
+      // if we post, we don't get a addedTo message from ourselves,
+			// so we add it explicitly
+      item.tasks.push(response);
+    }).error(function (response) {
+      console.log('post /task error');
+    });
+    item.newTask = {};
+  };
+
+
   (function() {
     $sails.get("/item").success(function (response) {
       $scope.items = response; 

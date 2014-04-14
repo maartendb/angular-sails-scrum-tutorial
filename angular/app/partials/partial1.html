@@ -7,6 +7,20 @@
       <li ng-repeat="task in item.tasks">
       {{task.title}} {{task.assignee}}
       </li>
+      <li>
+        <form role="form" ng-submit="createTask(item)">
+          <input type="text" ng-model="item.newTask.title" placeholder="Task" /><!--
+          --><input type="text" ng-model="item.newTask.assignee" placeholder="Assignee" /><!--
+          --><input type="submit" value="Add Task" />
+        </form>
+      </li>
     </ul>
   </li>
+  <li>
+		<form role="form" ng-submit="createItem(newItem)">
+			<input type="text" ng-model="newItem.role" placeholder="As a ..." /><!--
+			--><input type="text" ng-model="newItem.feature" placeholder="I want to ..." /><!--
+      --><input type="submit" value="Add Item" />
+		</form>
+	</li>
 </ul>
