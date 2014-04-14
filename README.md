@@ -325,12 +325,13 @@ If you reload http://localhost:1337/angular/app/ , you should now see a nested l
 ## TODO
 
  * Add more explanation and details to the last part
- * List of other tutorials and documentation I found useful
-
-## UPCOMING
-
- * Make the angular app the homepage
- * Add forms to create items and tasks **in branch forms**
- * Add forms to edit items and tasks attributes
- * Adding buttons to remove items and tasks
- * Using angular-ui-tree for a draggable tree
+ * Include a list of other tutorials and documentation I found useful
+ * The code in branch **forms** expands on the above by adding forms
+   to create new tasks and items and add them to sails.js with post calls.
+   Write another tutorial. 
+ * The code in branch **updateforms** expands on that by adding forms to
+   change tasks and items values and update sails.js with put calls. Write
+   another tutorial.
+ * Explain how to make the angular app the homepage with a copy task
+ * Add buttons to remove items and tasks
+ * Use angular-ui-tree to put all of the above a draggable tree
