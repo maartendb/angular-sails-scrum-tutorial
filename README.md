@@ -146,7 +146,7 @@ The AngularJS skeleton app is now accessible at http://localhost:8000/app/ .
 
 It is however very convenient to run our AngularJS app from sails.js, and it will make the communication between the two easier. Sails.js uses Express, so we can easily serve the angular folder as static files. There are many other ways, but I found this was by far the easiest.
 
-Go back to the scrum project folder and edit **config/express.js**
+Go back to your sails.js project folder and edit **config/express.js**
 
 ```javascript
 module.exports.express = {
@@ -310,11 +310,13 @@ myAppControllers.controller('MyCtrl2', [function() {
 }]);
 ```
 
-In **config/blueprints.js**, you will need to set autoWatch to true, in order to get **create** messages from the socket.io:
+In **config/blueprints.js**, you will need to set autoWatch to true, in order to get **create** messages from the socket.io. (This is not recommended, but for this tutorial it's ok)
 
 ```javascript
   autoWatch: true
 ```
+
+If you reload http://localhost:1337/angular/app/ , you should now see a nested list with the items and their tasks. When you create, destroy or update items or tasks with the sails.js RESTful, you should see the changes reflected in realtime in the angular app.
 
 ## TODO
 
