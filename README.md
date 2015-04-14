@@ -175,7 +175,7 @@ $ cd angular
 and add the dependency to **bower.json**
 
 ```
-"angular-sails": "https://github.com/kyjan/angular-sails.git"
+"angular-sails": "https://github.com/janpantel/angular-sails.git"
 ```
 
 and install it

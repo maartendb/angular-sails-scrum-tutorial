@@ -10,6 +10,6 @@
     "angular-route": "1.2.x",
     "angular-loader": "1.2.x",
     "angular-mocks": "~1.2.15",
-    "angular-sails": "https://github.com/kyjan/angular-sails.git"
+    "angular-sails": "https://github.com/janpantel/angular-sails.git"
   }
 }
